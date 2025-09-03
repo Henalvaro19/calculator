@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Anuitas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="calculator-section">
+    <div class="Kalkulator">
+      <input id="display" readonly placeholder="Rp 0">
+
+      <div class="input">
+        <label>Jumlah Pinjaman (Rp)</label>
+        <input type="number" id="loan" placeholder="Contoh: 10000000">
+      </div>
+
+      <div class="input">
+        <label>Bunga Per Tahun (%)</label>
+        <input type="number" id="rate" placeholder="Contoh: 5">
+      </div>
+
+      <div class="input">
+        <label>Lama Cicilan (Bulan)</label>
+        <input type="number" id="time" placeholder="Contoh: 12">
+      </div>
+
+      <div class="hasil">
+        <button onclick="calculateInstallment()" class="operator-button">=</button>
+        <button onclick="clearDisplay()" class="operator-button">C</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="explanation-section">
+    <div id="explanation">
+      <h3>Cara Penyelesaiannya</h3>
+      <p>Belum ada perhitungan. Silakan masukkan data pinjaman terlebih dahulu.</p>
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

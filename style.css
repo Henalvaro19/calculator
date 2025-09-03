@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+.calculator-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.Kalkulator {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.explanation-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    background: white;
+}
+
+#display {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: right;
+    border: none;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.05);
+    color: #222;
+    text-align: left;
+}
+
+.hasil {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 12px;
+}
+
+button {
+    flex: 1;
+    height: 55px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 165, 0, 0.9);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+}
+
+button:hover {
+    background: darkorange;
+    transform: scale(1.05);
+}
+
+.operator-button {
+    background: orange;
+    box-shadow: 0 4px 10px rgba(0, 136, 255, 0.3);
+}
+
+.operator-button:hover {
+    background: darkorange;
+}
+
+#explanation {
+    max-width: 400px;
+    margin: 20px auto 0;
+    padding: 20px;
+    font-size: 0.95rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    color: #222;
+    line-height: 1.5;
+    min-height: 120px;
+}
+
+#explanation h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: darkorange;
+    font-size: 1.2rem;
+}
+
