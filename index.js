@@ -22,8 +22,8 @@ function calculateInstallment() {
   explanation.innerHTML = `
     <h3>Cara Penyelesaiannya</h3>
     <p><b>Rumus Anuitas:</b><br>
-       A = (P × i) / (1 - (1+i)<sup>-n</sup>)</p>
-    <p><b>P</b> = Rp ${loan.toLocaleString("id-ID")}<br>
+       A = (M × i) / (1 - (1+i)<sup>-n</sup>)</p>
+    <p><b>M</b> = Rp ${loan.toLocaleString("id-ID")}<br>
        <b>i</b> = ${annualRate}% ÷ 12 = ${(monthlyRate*100).toFixed(4)}% per bulan<br>
        <b>n</b> = ${time} bulan</p>
     <p><b>Perhitungan:</b><br>
