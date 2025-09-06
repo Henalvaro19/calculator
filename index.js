@@ -1,44 +1,44 @@
-function calculateInstallment() {
-  const loan = parseFloat(document.getElementById("loan").value);
-  const annualRate = parseFloat(document.getElementById("rate").value);
-  const time = parseInt(document.getElementById("time").value);
+function hasil() {
+  const jumlahpinjaman = parseFloat(document.getElementById("jumlahpinjaman").value);
+  const annualBunga = parseFloat(document.getElementById("bunga").value);
+  const waktu = parseInt(document.getElementById("waktu").value);
   const display = document.getElementById("display");
-  const explanation = document.getElementById("explanation");
+  const penjelasan = document.getElementById("penjelasan");
 
-  if (isNaN(loan) || isNaN(annualRate) || isNaN(time) || loan <= 0 || annualRate < 0 || time <= 0) {
+  if (isNaN(jumlahpinjaman) || isNaN(annualBunga) || isNaN(waktu) || jumlahpinjaman <= 0 || annualBunga < 0 || waktu <= 0) {
     display.value = "Input error";
-    explanation.innerHTML = `
+    penjelasan.innerHTML = `
       <h3>Cara Penyelesaiannya</h3>
       <p>Input salah atau belum lengkap. Silakan isi semua kolom dengan benar.</p>
     `;
     return;
   }
 
-  const monthlyRate = (annualRate / 100) / 12;
-  const installment = (loan * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -time));
-  
-  display.value = "Rp " + installment.toLocaleString("id-ID", { minimumFractionDigits: 2 });
+  const bulan = (annualBunga / 100) / 12;
+  const samaDengan = (jumlahpinjaman * bulan) / (1 - Math.pow(1 + bulan, -waktu));
 
-  explanation.innerHTML = `
+  display.value = "Rp " + samaDengan.toLocaleString("id-ID", { minimumFractionDigits: 2 });
+
+  penjelasan.innerHTML = `
     <h3>Cara Penyelesaiannya</h3>
     <p><b>Rumus Anuitas:</b><br>
        A = (M × i) / (1 - (1+i)<sup>-n</sup>)</p>
-    <p><b>M</b> = Rp ${loan.toLocaleString("id-ID")}<br>
-       <b>i</b> = ${annualRate}% ÷ 12 = ${(monthlyRate*100).toFixed(4)}% per bulan<br>
-       <b>n</b> = ${time} bulan</p>
+    <p><b>M</b> = Rp ${jumlahpinjaman.toLocaleString("id-ID")}<br>
+       <b>i</b> = ${annualBunga}% ÷ 12 = ${(bulan*100).toFixed(4)}% per bulan<br>
+       <b>n</b> = ${waktu} bulan</p>
     <p><b>Perhitungan:</b><br>
-       A = ( ${loan.toLocaleString("id-ID")} × ${(monthlyRate).toFixed(6)} ) ÷ (1 - (1 + ${(monthlyRate).toFixed(6)})<sup>-${time}</sup>)</p>
+       A = ( ${jumlahpinjaman.toLocaleString("id-ID")} × ${(bulan).toFixed(6)} ) ÷ (1 - (1 + ${(bulan).toFixed(6)})<sup>-${waktu}</sup>)</p>
     <p><b>Hasil:</b><br>
-       A = Rp ${installment.toLocaleString("id-ID", { minimumFractionDigits: 2 })} per bulan</p>
+       A = Rp ${samaDengan.toLocaleString("id-ID", { minimumFractionDigits: 2 })} per bulan</p>
   `;
 }
 
-function clearDisplay() {
-  document.getElementById("loan").value = "";
-  document.getElementById("rate").value = "";
-  document.getElementById("time").value = "";
+function hapus() {
+  document.getElementById("jumlahpinjaman").value = "";
+  document.getElementById("bunga").value = "";
+  document.getElementById("waktu").value = "";
   document.getElementById("display").value = "Rp 0";
-  document.getElementById("explanation").innerHTML = `
+  document.getElementById("penjelasan").innerHTML = `
     <h3>Cara Penyelesaiannya</h3>
     <p>Belum ada perhitungan. Silakan masukkan data pinjaman terlebih dahulu.</p>
   `;

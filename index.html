@@ -13,28 +13,28 @@
 
       <div class="input">
         <label>Jumlah Pinjaman (Rp)</label>
-        <input type="number" id="loan" placeholder="Contoh: 10000000">
+        <input type="number" id="jumlahpinjaman" placeholder="Contoh: 10000000">
       </div>
 
       <div class="input">
         <label>Bunga Per Tahun (%)</label>
-        <input type="number" id="rate" placeholder="Contoh: 5">
+        <input type="number" id="bunga" placeholder="Contoh: 5">
       </div>
 
       <div class="input">
         <label>Lama Cicilan (Bulan)</label>
-        <input type="number" id="time" placeholder="Contoh: 12">
+        <input type="number" id="waktu" placeholder="Contoh: 12">
       </div>
 
       <div class="hasil">
-        <button onclick="calculateInstallment()" class="operator-button">=</button>
-        <button onclick="clearDisplay()" class="operator-button">C</button>
+        <button onclick="hasil()" class="operator-button">=</button>
+        <button onclick="hapus()" class="operator-button">C</button>
       </div>
     </div>
   </section>
 
-  <section class="explanation-section fade-up">
-    <div id="explanation">
+  <section class="penjelasan-section fade-up">
+    <div id="penjelasan">
       <h3>Cara Penyelesaiannya</h3>
       <p>Belum ada perhitungan. Silakan masukkan data pinjaman terlebih dahulu.</p>
     </div>
